@@ -608,6 +608,7 @@ Phony.define do
           one_of('700', '800')  >> split(2,3)   | # Service
           match(/^(6\d\d)\d+$/) >> split(2,3)   | # Mobile
           one_of('5')           >> split(3,2,2) | # Vilnius
+          one_of('8')           >> split(3,3,2) | # landline outside Vilnius
           one_of('37','41')     >> split(2,2,2) | # Kaunas, Šiauliai
           fixed(3)              >> split(1,2,2)   # 3-digit NDCs.
 

@@ -619,6 +619,7 @@ Phony.define do
   country '372',
           match(/^(5\d\d\d)\d+$/)          >> split(3..4)  | # Mobile
           match(/^((?:70|8[12])\d\d)\d+$/) >> split(4)     | # Mobile
+          one_of('5')                      >> split(3,2,2) | # Mobile (8 digits)
           fixed(3)                         >> split(4)       # 3-digit NDCs
 
   # country '373' # Moldova, see special file
